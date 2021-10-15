@@ -4,7 +4,7 @@
 ### Description and Installation
 This script identifies and related individuals in a dataset and generates a remove list based on the Ritland estimator calculated using the [coancestry](https://rdrr.io/rforge/related/man/coancestry.html) function of the [related](https://rdrr.io/rforge/related/man/related-package.html) R-package).
 
-This script first removes replicate samples (if present), then detects related pairs of individuals based on your specified threshold. It then iteratively removes one individual from each pair based either of frequency of interactions of percent missingness until no related pairs remain, removing the fewest individuals as necessary.
+This script first removes replicate samples (if present), then detects related pairs of individuals based on your specified threshold. It then iteratively removes one individual from each pair based either of frequency of interactions of proportion of missing genotypes until no related pairs remain, removing the fewest individuals as necessary.
 
 To install this script, use the following command:
 
@@ -22,7 +22,7 @@ You may need to change permissions, which can be done running the following:
 | Argument | Description |
 | --- | --- |
 | threshold [int] | **Required**; relatedness threshold for highly-related individuals (*e.g.*, 0.5 to remove first order relatives) |
-| freq/miss | **Required**; remove individuals based on their frequency of interactions (`freq`) or by percent missing data (`miss`). `freq` will remove those individuals that are related to many others (*e.g.*, an individual related to 5 others will be removed over one that is related to only 3), while `miss` will remove those individuals with the highest missing data first |
+| freq/miss | **Required**; remove individuals based on their frequency of interactions (`freq`) or by proporition of missing genotypes (`miss`). `freq` will remove those individuals that are related to many others (*e.g.*, an individual related to 5 others will be removed over one that is related to only 3), while `miss` will remove those individuals with the highest missing data first |
 | no_reps | **Optional**; disable removal of replicate samples prior to detection of related individuals. Use this option if your dataset does not contain replicate samples |
 
 ### Required Files
