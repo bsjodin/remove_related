@@ -12,7 +12,7 @@ To install this script, use the following command:
 
 You may need to change permissions, which can be done running the following:
 
-```$chmod 755 remove_related.sh```
+```$ chmod 755 remove_related.sh```
 
 ### Usage and Options
 **Usage**\
