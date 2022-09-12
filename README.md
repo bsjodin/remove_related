@@ -2,7 +2,7 @@
 # remove_related
 
 ### Description and Installation
-This script identifies and related individuals in a dataset and generates a remove list based on the Ritland estimator calculated using the [coancestry](https://rdrr.io/rforge/related/man/coancestry.html) function of the [related](https://rdrr.io/rforge/related/man/related-package.html) R-package).
+This script identifies and related individuals in a dataset and generates a remove list based on the Ritland estimator calculated using the [coancestry](https://rdrr.io/rforge/related/man/coancestry.html) function of the [related](https://rdrr.io/rforge/related/man/related-package.html) R-package.
 
 This script first removes replicate samples (if present), then detects related pairs of individuals based on your specified threshold. It then iteratively removes one individual from each pair based either of frequency of interactions of proportion of missing genotypes until no related pairs remain, removing the fewest individuals as necessary. This script only compares individuals from within a population.
 
